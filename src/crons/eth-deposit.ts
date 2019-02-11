@@ -46,7 +46,6 @@ export class EthDeposit extends NestSchedule {
   public async cron(): Promise<void> {
     try {
       if (this.cronLock.depositCron === true) {
-        this.logger.debug('last depositCron still in handling');
         return;
       }
       this.cronLock.depositCron = true;
@@ -54,7 +53,6 @@ export class EthDeposit extends NestSchedule {
         .minimumThreshold;
       const pocketAddr = this.config.ethereum.pocketAddr;
       const step = this.config.ethereum.ETH.deposit.step;
-      this.logger.debug(new Date());
       const coin = await Coin.createQueryBuilder()
         .where({ symbol: ETH })
         .getOne();
@@ -132,7 +130,6 @@ export class EthDeposit extends NestSchedule {
         );
         coin.info.cursor = blockIndex;
         await coin.save();
-        this.logger.debug('blockIndex: ', blockIndex);
       }
       this.logger.debug('finish deposit this time');
       this.cronLock.depositCron = false;
