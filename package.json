@@ -44,7 +44,7 @@
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.2.1",
     "superagent": "^4.0.0-beta.5",
-    "typeorm": "^0.2.0",
+    "typeorm": "^0.2.25",
     "typescript": "^3.0.0",
     "web3": "^1.0.0-beta.36"
   },
