@@ -32,7 +32,7 @@
     "bitcoinjs-lib": "^4.0.0",
     "bunyan": "^1.8.1",
     "class-transformer": "^0.1.0",
-    "class-validator": "^0.9.0",
+    "class-validator": "^0.14.0",
     "dotenv": "^6.0.0",
     "ethereumjs-wallet": "^0.6.0",
     "forever": "^0.15.3",
